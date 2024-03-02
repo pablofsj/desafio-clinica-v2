@@ -153,7 +153,7 @@ nuevosDatosTraumatologias.forEach(element => {
 
 // 2. Eliminar el primer y último elemento del arreglo de Radiología 
 
-const borraPrimeroUltimoRadiologia = () =>{
+const borraPrimeroUltimoRadiologia = () => {
     arrayRadiologias.pop()
     arrayRadiologias.shift()
 }
@@ -172,7 +172,7 @@ const atencionesDental = document.querySelector('#atencionesDental')
 arrayDentales.forEach(elemento => {
     atencionesDental.innerHTML += `
     <p></p>
-    <p>${elemento.hora} - ${elemento.especialista} - ${elemento.paciente} - ${elemento.rut} - ${elemento.prevision}</p>`  
+    <p>${elemento.hora} - ${elemento.especialista} - ${elemento.paciente} - ${elemento.rut} - ${elemento.prevision}</p>`
 });
 
 
@@ -184,8 +184,8 @@ const atencionesTodo = document.querySelector('#atencionesTodo')
 
 const atencionesNombre = (array) => {
     array.forEach(elemento => {
-        atencionesTodo.innerHTML += 
-        `<p>${elemento.paciente}</p>`  
+        atencionesTodo.innerHTML +=
+            `<p>${elemento.paciente}</p>`
     });
 }
 
@@ -198,11 +198,11 @@ atencionesNombre(arrayDentales)
 // de Dental 
 
 const dentalIsapre = document.querySelector('#dentalIsapre')
-const filtroDentalIsapre = arrayDentales.filter((elemento)=>elemento.prevision == 'ISAPRE')
+const filtroDentalIsapre = arrayDentales.filter((elemento) => elemento.prevision == 'ISAPRE')
 
-filtroDentalIsapre.forEach((elemento)=>{
-    dentalIsapre.innerHTML += 
-    `<p>${elemento.paciente} - ${elemento.prevision} </p>`
+filtroDentalIsapre.forEach((elemento) => {
+    dentalIsapre.innerHTML +=
+        `<p>${elemento.paciente} - ${elemento.prevision} </p>`
 })
 
 
@@ -210,11 +210,11 @@ filtroDentalIsapre.forEach((elemento)=>{
 // de Traumatología 
 
 const traumaFonasa = document.querySelector('#traumaFonasa')
-const filtroTraumaFonasa = arrayTraumatologias.filter((elemento)=>elemento.prevision == 'FONASA')
+const filtroTraumaFonasa = arrayTraumatologias.filter((elemento) => elemento.prevision == 'FONASA')
 
-filtroTraumaFonasa.forEach((elemento)=>{
-    traumaFonasa.innerHTML += 
-    `<p>${elemento.paciente} - ${elemento.prevision} </p>`
+filtroTraumaFonasa.forEach((elemento) => {
+    traumaFonasa.innerHTML +=
+        `<p>${elemento.paciente} - ${elemento.prevision} </p>`
 })
 
 
